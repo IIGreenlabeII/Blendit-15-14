@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Blendit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Blend'it" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRf-aa-YaE">
+                                <rect key="frame" x="-71" y="28" width="556" height="84"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="80"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Van-BP-B3L">
+                                <rect key="frame" x="10" y="274" width="393" height="63"/>
+                                <color key="backgroundColor" red="0.214741934" green="0.5" blue="0.43228810509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <state key="normal" title="Let's get started!">
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="NJD-Il-GEC" kind="show" id="AaH-jH-hlm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.89898989898989901" green="0.89898989898989901" blue="0.89898989898989901" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="GRf-aa-YaE" secondAttribute="centerX" constant="6" id="Z35-YX-dOL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GRf-aa-YaE" secondAttribute="trailing" constant="5" id="aQl-Sg-qkM"/>
+                            <constraint firstAttribute="centerX" secondItem="Van-BP-B3L" secondAttribute="centerX" constant="0.5" id="j9c-Ku-fbF"/>
+                            <constraint firstItem="GRf-aa-YaE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="m9m-JN-kO1"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="introLabel" destination="GRf-aa-YaE" id="WV9-aw-ZWh"/>
+                        <outlet property="startButton" destination="Van-BP-B3L" id="ZwC-uR-xap"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="628" y="182"/>
+        </scene>
+        <!--Style Keuze-->
+        <scene sceneID="MuG-k2-FK3">
+            <objects>
+                <viewController id="NJD-Il-GEC" customClass="StyleKeuze" customModule="Blendit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NOD-o3-N3D"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZB2-5e-1UW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gre-du-jR5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Kies je stijl!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e06-Ez-cLP">
+                                <rect key="frame" x="5" y="20" width="404" height="55"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QcX-58-73x">
+                                <rect key="frame" x="11" y="141" width="297" height="63"/>
+                                <color key="backgroundColor" red="0.214741934" green="0.5" blue="0.43228810509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" title="Hou het simpel"/>
+                                <connections>
+                                    <action selector="casualAction:" destination="NJD-Il-GEC" eventType="touchUpInside" id="cwa-Sc-1rQ"/>
+                                    <segue destination="7aM-4A-sNF" kind="show" id="QuI-Lb-jCo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7uI-48-zDr">
+                                <rect key="frame" x="11" y="222" width="255" height="63"/>
+                                <color key="backgroundColor" red="0.214741934" green="0.5" blue="0.43228810509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sportAction:" destination="NJD-Il-GEC" eventType="touchUpInside" id="Y0X-7v-cnk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3w-D4-v0K">
+                                <rect key="frame" x="11" y="384" width="393" height="63"/>
+                                <color key="backgroundColor" red="0.214741934" green="0.5" blue="0.43228810509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="zakelijkAction:" destination="NJD-Il-GEC" eventType="touchUpInside" id="pj7-CI-tZz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Zakelijk" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAj-a7-mlx">
+                                <rect key="frame" x="44" y="395" width="302" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" red="0.89898989900000004" green="0.89898989900000004" blue="0.89898989900000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YW3-bt-bXr">
+                                <rect key="frame" x="11" y="465" width="214" height="63"/>
+                                <color key="backgroundColor" red="0.214741934" green="0.5" blue="0.43228810509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="trendyAction:" destination="NJD-Il-GEC" eventType="touchUpInside" id="aol-fW-mij"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Casual" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2Q-b6-eVt">
+                                <rect key="frame" x="44" y="152" width="230" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" red="0.89898989900000004" green="0.89898989900000004" blue="0.89898989900000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sportief" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6b-fE-Cia">
+                                <rect key="frame" x="44" y="233" width="209" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" red="0.89898989900000004" green="0.89898989900000004" blue="0.89898989900000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chic" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0TJ-kq-Wv5">
+                                <rect key="frame" x="44" y="314" width="209" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" red="0.89898989900000004" green="0.89898989900000004" blue="0.89898989900000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trendy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pjV-re-AvR">
+                                <rect key="frame" x="44" y="476" width="169" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" red="0.89898989900000004" green="0.89898989900000004" blue="0.89898989900000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHR-CC-x2n">
+                                <rect key="frame" x="11" y="303" width="324" height="63"/>
+                                <color key="backgroundColor" red="0.214741934" green="0.5" blue="0.43228810509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chicAction:" destination="NJD-Il-GEC" eventType="touchUpInside" id="WIT-gs-awA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.89898989900000004" green="0.89898989900000004" blue="0.89898989900000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="YW3-bt-bXr" secondAttribute="centerX" constant="89" id="9ly-GV-JdM"/>
+                            <constraint firstAttribute="centerX" secondItem="e06-Ez-cLP" secondAttribute="centerX" id="AvN-ld-bMw"/>
+                            <constraint firstItem="eHR-CC-x2n" firstAttribute="top" secondItem="7uI-48-zDr" secondAttribute="bottom" constant="20" id="BrW-JR-N1h"/>
+                            <constraint firstAttribute="centerX" secondItem="7uI-48-zDr" secondAttribute="centerX" constant="68.5" id="FLJ-eH-may"/>
+                            <constraint firstAttribute="centerX" secondItem="f3w-D4-v0K" secondAttribute="centerX" constant="-0.5" id="QpZ-Q6-MJh"/>
+                            <constraint firstItem="eHR-CC-x2n" firstAttribute="top" secondItem="7uI-48-zDr" secondAttribute="bottom" constant="20" id="aMv-NL-145"/>
+                            <constraint firstItem="f3w-D4-v0K" firstAttribute="top" secondItem="eHR-CC-x2n" secondAttribute="bottom" constant="20" id="bye-Lq-eEv"/>
+                            <constraint firstAttribute="centerX" secondItem="eHR-CC-x2n" secondAttribute="centerX" constant="34" id="c4p-ua-zdO"/>
+                            <constraint firstItem="7uI-48-zDr" firstAttribute="top" secondItem="QcX-58-73x" secondAttribute="bottom" constant="20" id="jNu-nt-821"/>
+                            <constraint firstItem="YW3-bt-bXr" firstAttribute="top" secondItem="f3w-D4-v0K" secondAttribute="bottom" constant="20" id="jml-dl-v69"/>
+                            <constraint firstItem="7uI-48-zDr" firstAttribute="top" secondItem="QcX-58-73x" secondAttribute="bottom" constant="20" id="va9-I3-CR7"/>
+                            <constraint firstAttribute="centerX" secondItem="QcX-58-73x" secondAttribute="centerX" constant="47.5" id="zdG-hh-kZc"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="kies" destination="e06-Ez-cLP" id="XXZ-aV-2Sc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2lP-Bx-s1l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1201" y="182"/>
+        </scene>
+        <!--Casual Kledingstukken-->
+        <scene sceneID="eMo-H7-d1b">
+            <objects>
+                <viewController id="7aM-4A-sNF" customClass="CasualKledingstukken" customModule="Blendit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ax7-MG-saJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ghm-2K-Mrm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="t9U-C7-Gyj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Stijl" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jV9-Jg-Zkf">
+                                <rect key="frame" x="5" y="20" width="404" height="55"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYT-cN-Oeg">
+                                <rect key="frame" x="76" y="210" width="262" height="100"/>
+                                <color key="backgroundColor" red="0.6039693813" green="0.39473204890000002" blue="0.24734275529999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="brownAction:" destination="7aM-4A-sNF" eventType="touchUpInside" id="YLi-OV-1va"/>
+                                    <segue destination="2Pc-pO-8IT" kind="show" id="mFn-TF-aCE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6B3-Jz-OW6">
+                                <rect key="frame" x="82" y="349" width="250" height="100"/>
+                                <color key="backgroundColor" red="0.1867497585" green="0.3818826353" blue="0.66175426140000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="blueAction:" destination="7aM-4A-sNF" eventType="touchUpInside" id="NhC-vp-uA6"/>
+                                    <segue destination="2Pc-pO-8IT" kind="show" id="5jW-KN-4ab"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUq-v1-bFy">
+                                <rect key="frame" x="16" y="83" width="382" height="32"/>
+                                <color key="backgroundColor" red="0.214741934" green="0.5" blue="0.43228810509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.89898989900000004" green="0.89898989900000004" blue="0.89898989900000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="6B3-Jz-OW6" secondAttribute="centerX" id="Gsd-Bc-YPn"/>
+                            <constraint firstAttribute="centerX" secondItem="DYT-cN-Oeg" secondAttribute="centerX" id="MqH-PA-IkP"/>
+                            <constraint firstAttribute="centerX" secondItem="lUq-v1-bFy" secondAttribute="centerX" id="avF-PU-tj6"/>
+                            <constraint firstAttribute="centerX" secondItem="jV9-Jg-Zkf" secondAttribute="centerX" id="rWG-dW-wAe"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="blauweKnop" destination="6B3-Jz-OW6" id="JzY-uJ-6Iv"/>
+                        <outlet property="bruineKnop" destination="DYT-cN-Oeg" id="aT3-nv-nEU"/>
+                        <outlet property="showStijl" destination="jV9-Jg-Zkf" id="hT4-EW-1Vj"/>
+                        <outlet property="tekstLabel" destination="lUq-v1-bFy" id="ZYp-U8-jv6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y74-QS-ihY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1771" y="-130"/>
+        </scene>
+        <!--Kledingsoorten-->
+        <scene sceneID="eWv-3i-kIa">
+            <objects>
+                <viewController id="2Pc-pO-8IT" customClass="Kledingsoorten" customModule="Blendit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8De-os-ABC"/>
+                        <viewControllerLayoutGuide type="bottom" id="a1c-M2-8eG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UDB-gI-qnM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Kledingstuk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ln-6u-JKQ">
+                                <rect key="frame" x="5" y="20" width="404" height="55"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wqr-BH-Gun">
+                                <rect key="frame" x="86" y="177" width="243" height="143"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="kledingstukAction:" destination="2Pc-pO-8IT" eventType="touchUpInside" id="7qe-Rm-6R4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.89898989900000004" green="0.89898989900000004" blue="0.89898989900000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="4ln-6u-JKQ" secondAttribute="centerX" id="Bxg-1m-clg"/>
+                            <constraint firstAttribute="centerX" secondItem="Wqr-BH-Gun" secondAttribute="centerX" constant="-0.5" id="vRW-Fx-ToY"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="kledingsoort" destination="4ln-6u-JKQ" id="fch-U7-hb3"/>
+                        <outlet property="soortImage" destination="Wqr-BH-Gun" id="gLC-fu-Ox1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t3I-HK-faW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2302" y="-130"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="opH-zm-5L4">
+            <objects>
+                <viewController id="gJO-BE-Eqn" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dr6-Ah-0Jr"/>
+                        <viewControllerLayoutGuide type="bottom" id="obF-w2-9bu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jqd-5V-mcY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.89898989900000004" green="0.89898989900000004" blue="0.89898989900000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m9t-GX-V6A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2802" y="-958"/>
+        </scene>
+        <!--Color Selecteren-->
+        <scene sceneID="UYr-67-Wdz">
+            <objects>
+                <viewController id="uUb-6C-6DM" customClass="ColorSelecteren" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yS8-Hg-Uvb"/>
+                        <viewControllerLayoutGuide type="bottom" id="hmU-Hb-fAt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gr8-Hb-RvN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtL-4N-pDW">
+                                <rect key="frame" x="0.0" y="222" width="226" height="63"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <state key="normal" title="Wit">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3de-A2-1aV">
+                                <rect key="frame" x="0.0" y="141" width="214" height="63"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <state key="normal" title="Zwart">
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kO8-f3-KdI">
+                                <rect key="frame" x="0.0" y="303" width="238" height="63"/>
+                                <color key="backgroundColor" red="0.74741556186868685" green="0.19007729383222879" blue="0.1893193892971767" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <state key="normal" title="Rood">
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypb-Um-rGa">
+                                <rect key="frame" x="0.0" y="384" width="250" height="63"/>
+                                <color key="backgroundColor" red="0.18674975853320483" green="0.38188263531776451" blue="0.66175426136363635" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <state key="normal" title="Blauw">
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YD9-FO-AFA">
+                                <rect key="frame" x="0.0" y="465" width="262" height="63"/>
+                                <color key="backgroundColor" red="0.60396938131313127" green="0.39473204886742047" blue="0.24734275526546878" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <state key="normal" title="Bruin">
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGR-cj-DwC">
+                                <rect key="frame" x="0.0" y="546" width="274" height="63"/>
+                                <color key="backgroundColor" red="0.214741934" green="0.5" blue="0.43228810509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <state key="normal" title="Groen">
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Kies jouw kleur!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXA-Xd-fF7">
+                                <rect key="frame" x="5" y="20" width="404" height="55"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YcH-jR-lap">
+                                <rect key="frame" x="186" y="83" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.89898989900000004" green="0.89898989900000004" blue="0.89898989900000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="mXA-Xd-fF7" secondAttribute="centerX" id="37i-RB-9MG"/>
+                            <constraint firstItem="TGR-cj-DwC" firstAttribute="top" secondItem="YD9-FO-AFA" secondAttribute="bottom" constant="18" id="8gM-MD-ROm"/>
+                            <constraint firstItem="ypb-Um-rGa" firstAttribute="top" secondItem="kO8-f3-KdI" secondAttribute="bottom" constant="18" id="A0y-xD-0jz"/>
+                            <constraint firstItem="dtL-4N-pDW" firstAttribute="top" secondItem="3de-A2-1aV" secondAttribute="bottom" constant="18" id="GU4-Rl-L7d"/>
+                            <constraint firstItem="kO8-f3-KdI" firstAttribute="top" secondItem="dtL-4N-pDW" secondAttribute="bottom" constant="18" id="Qjj-v4-qhR"/>
+                            <constraint firstItem="YD9-FO-AFA" firstAttribute="top" secondItem="ypb-Um-rGa" secondAttribute="bottom" constant="18" id="fOz-ct-jln"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0fv-S0-Qu6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1771" y="-958"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="CDp-dt-bwq">
+            <objects>
+                <viewController id="3fp-qO-c9c" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GDs-zV-3aS"/>
+                        <viewControllerLayoutGuide type="bottom" id="DyZ-Ql-XFR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4hl-lC-XTU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.89898989900000004" green="0.89898989900000004" blue="0.89898989900000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aAN-1R-m4N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2302" y="-958"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="mFn-TF-aCE"/>
+    </inferredMetricsTieBreakers>
+</document>
