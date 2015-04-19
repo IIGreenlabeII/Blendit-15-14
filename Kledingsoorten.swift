@@ -24,12 +24,16 @@ class Kledingsoorten: UIViewController {
     var soort = String()
     var check = String()
     
-    var bb: CALayer {
-        return backButton.layer
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        let button   = UIButton.buttonWithType(UIButtonType.System) as! UIButton
+//        button.frame = CGRectMake(100, 100, 100, 50)
+//        button.backgroundColor = UIColor.greenColor()
+//        button.setTitle("Test Button", forState: UIControlState.Normal)
+//        button.addTarget(self, action: "closeCamera:", forControlEvents: UIControlEvents.TouchUpInside)
+//        
+//        self.view.addSubview(button)
         
         kledingsoort.text = stijl + " -> " + soort
         
@@ -51,14 +55,14 @@ class Kledingsoorten: UIViewController {
         
         switch(soort){
         case "Hoofddeksels":
-            NSLog("Soort Hoofddeksels")
+            NSLog(soort)
             let image = UIImage(named: "RedCap")
             let imageView = UIImageView(image: image)
             soortImage.setBackgroundImage(image, forState:UIControlState.Normal)
             ("Hoofddeksels", forState: UIControlState.Normal)
             break
         case "Brillen":
-            NSLog("Soort Brillen")
+            NSLog(soort)
             let image = UIImage(named: "SunglassesR")
             let imageView = UIImageView(image: image)
             soortImage.setBackgroundImage(image, forState:UIControlState.Normal)
@@ -81,16 +85,20 @@ class Kledingsoorten: UIViewController {
         switch(check){
         case "close":
             backButton.setTitle(" ", forState: UIControlState.Normal)
+            previewLayer?.removeFromSuperlayer()
             NSLog("Close")
             break
         default:
             break
         }
-        previewLayer?.removeFromSuperlayer()
     }
     
     func beginSession() {
         
+        var bb: CALayer {
+            return backButton.layer
+        }
+
         var err : NSError? = nil
         captureSession.addInput(AVCaptureDeviceInput(device: captureDevice, error: &err))
         
@@ -98,10 +106,41 @@ class Kledingsoorten: UIViewController {
             println("error: \(err?.localizedDescription)")
         }
         
+        
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         self.view.layer.addSublayer(previewLayer)
         switch(check){
         case "show":
+            switch(soort){
+                case "Hoofddeksels":
+                    var imageName = "frontCap.png"
+                    var image = UIImage(named: imageName)
+                    var imageView = UIImageView(image: image!)
+                    
+                    var im: CALayer {
+                        return imageView.layer
+                    }
+                    
+                    imageView.frame = CGRect(x: 105, y: 100, width: 197, height: 159)
+                    
+                    self.view.layer.insertSublayer(im, above: previewLayer)
+                    break
+                case "Brillen":
+                    var imageName = "Sunglasses.png"
+                    var image = UIImage(named: imageName)
+                    var imageView = UIImageView(image: image!)
+                    
+                    var im: CALayer {
+                        return imageView.layer
+                    }
+                    
+                    imageView.frame = CGRect(x: 130, y: 200, width: 180, height: 100)
+                    
+                    self.view.layer.insertSublayer(im, above: previewLayer)
+                    break
+                default:
+                    break
+            }
             backButton.setTitle("Sluit camera", forState: UIControlState.Normal)
             NSLog("Komt door")
             break
@@ -109,6 +148,7 @@ class Kledingsoorten: UIViewController {
             break
         }
         self.view.layer.insertSublayer(bb, above: previewLayer)
+
         previewLayer?.frame = self.view.layer.frame
         captureSession.startRunning()
     }
