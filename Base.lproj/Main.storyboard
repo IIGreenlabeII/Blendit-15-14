@@ -301,8 +301,12 @@
                                     <action selector="closeCamera:" destination="2Pc-pO-8IT" eventType="touchUpInside" id="iWf-nu-fNX"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t0N-l5-SMg">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t0N-l5-SMg">
                                 <rect key="frame" x="107" y="148" width="200" height="128"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="vQO-d2-XkJ" appends="YES" id="FAX-T4-vvw"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.89898989900000004" green="0.89898989900000004" blue="0.89898989900000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -320,6 +324,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t3I-HK-faW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="vQO-d2-XkJ">
+                    <connections>
+                        <action selector="handlePan:" destination="2Pc-pO-8IT" id="eQN-B3-WLn"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2302" y="-130"/>
         </scene>
