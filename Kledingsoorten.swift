@@ -34,6 +34,21 @@ class Kledingsoorten: UIViewController {
         recognizer.setTranslation(CGPointZero, inView: self.view)
     }
     
+    @IBAction func handlePinch(recognizer : UIPinchGestureRecognizer) {
+        if let view = recognizer.view {
+            view.transform = CGAffineTransformScale(view.transform,
+                recognizer.scale, recognizer.scale)
+            recognizer.scale = 1
+        }
+    }
+    
+    @IBAction func handleRotate(recognizer : UIRotationGestureRecognizer) {
+        if let view = recognizer.view {
+            view.transform = CGAffineTransformRotate(view.transform, recognizer.rotation)
+            recognizer.rotation = 0
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
