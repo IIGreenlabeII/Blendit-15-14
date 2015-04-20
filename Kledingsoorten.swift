@@ -15,6 +15,7 @@ class Kledingsoorten: UIViewController {
     @IBOutlet var kledingsoort: UILabel!
     @IBOutlet var soortImage: UIButton!
     @IBOutlet var backButton: UIButton!
+    @IBOutlet var kledingImage: UIImageView!
     
     let captureSession = AVCaptureSession()
 
@@ -85,6 +86,7 @@ class Kledingsoorten: UIViewController {
         switch(check){
         case "close":
             backButton.setTitle(" ", forState: UIControlState.Normal)
+            kledingImage.image = UIImage(named: " ")
             previewLayer?.removeFromSuperlayer()
             NSLog("Close")
             break
@@ -113,28 +115,30 @@ class Kledingsoorten: UIViewController {
         case "show":
             switch(soort){
                 case "Hoofddeksels":
-                    var imageName = "frontCap.png"
-                    var image = UIImage(named: imageName)
-                    var imageView = UIImageView(image: image!)
+                    kledingImage.image = UIImage(named: "frontCap.png")
+//                    var imageName = "frontCap.png"
+//                    var image = UIImage(named: imageName)
+//                    var imageView = UIImageView(image: image!)
                     
                     var im: CALayer {
-                        return imageView.layer
+                        return kledingImage.layer
                     }
                     
-                    imageView.frame = CGRect(x: 105, y: 100, width: 197, height: 159)
+//                    kledingImage.frame = CGRect(x: 105, y: 100, width: 100, height: 159)
                     
                     self.view.layer.insertSublayer(im, above: previewLayer)
                     break
                 case "Brillen":
-                    var imageName = "Sunglasses.png"
-                    var image = UIImage(named: imageName)
-                    var imageView = UIImageView(image: image!)
+                    kledingImage.image = UIImage(named: "Sunglasses.png")
+//                    var imageName = "Sunglasses.png"
+//                    var image = UIImage(named: imageName)
+//                    var imageView = UIImageView(image: image!)
                     
                     var im: CALayer {
-                        return imageView.layer
+                        return kledingImage.layer
                     }
                     
-                    imageView.frame = CGRect(x: 130, y: 200, width: 180, height: 100)
+//                    kledingImage.frame = CGRect(x: 130, y: 200, width: 180, height: 100)
                     
                     self.view.layer.insertSublayer(im, above: previewLayer)
                     break

@@ -284,7 +284,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wqr-BH-Gun">
-                                <rect key="frame" x="86" y="177" width="243" height="143"/>
+                                <rect key="frame" x="86" y="296" width="243" height="143"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -301,6 +301,9 @@
                                     <action selector="closeCamera:" destination="2Pc-pO-8IT" eventType="touchUpInside" id="iWf-nu-fNX"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t0N-l5-SMg">
+                                <rect key="frame" x="107" y="148" width="200" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.89898989900000004" green="0.89898989900000004" blue="0.89898989900000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -311,6 +314,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="backButton" destination="CYG-Zf-VOW" id="jSv-jA-hiF"/>
+                        <outlet property="kledingImage" destination="t0N-l5-SMg" id="BK2-ke-TT9"/>
                         <outlet property="kledingsoort" destination="4ln-6u-JKQ" id="fch-U7-hb3"/>
                         <outlet property="soortImage" destination="Wqr-BH-Gun" id="gLC-fu-Ox1"/>
                     </connections>
