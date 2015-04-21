@@ -15,6 +15,7 @@ class CasualKledingstukken: UIViewController {
     @IBOutlet var tekstLabel: UILabel!
     @IBOutlet var blauweKnop: UIButton!
     @IBOutlet var bruineKnop: UIButton!
+    @IBOutlet var brilKnop: UIButton!
     
     var stijl = String()
     var soort = String()
@@ -29,7 +30,8 @@ class CasualKledingstukken: UIViewController {
                 NSLog("Stijl Casual")
                 tekstLabel.text = "Selecteer een kledingstuk"
                 bruineKnop.setTitle("Hoofddeksels", forState: UIControlState.Normal)
-                blauweKnop.setTitle("Brillen", forState: UIControlState.Normal)
+                blauweKnop.setTitle("Shirts", forState: UIControlState.Normal)
+                brilKnop.setTitle("Brillen", forState: UIControlState.Normal)
                 break
             default:
                 break
@@ -40,6 +42,9 @@ class CasualKledingstukken: UIViewController {
         return soort = "Hoofddeksels"
     }
     @IBAction func blueAction(sender: AnyObject) {
+        return soort = "Shirts"
+    }
+    @IBAction func brilAction(sender: AnyObject) {
         return soort = "Brillen"
     }
   

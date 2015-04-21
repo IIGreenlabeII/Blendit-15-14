@@ -49,9 +49,36 @@ class Kledingsoorten: UIViewController {
         }
     }
     
+    @IBAction func longPressed(longPress: UIGestureRecognizer) {
+        if(longPress.state == UIGestureRecognizerState.Began){
+            switch(soort){
+                case "Hoofddeksels":
+                    kledingImage.image = UIImage(named: "frontCap.png")
+                    break
+            case "Brillen":
+                    kledingImage.image = UIImage(named: "Sunglasses.png")
+                break
+            default:
+                    break
+            }
+        } else if(longPress.state == UIGestureRecognizerState.Ended) {
+            switch(soort){
+            case "Hoofddeksels":
+                kledingImage.image = UIImage(named: "backCap.png")
+                break
+            case "Brillen":
+                kledingImage.image = UIImage(named: "SunglassesShad.png")
+                break
+            default:
+                break
+            }
+            NSLog("Started")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
 //        let button   = UIButton.buttonWithType(UIButtonType.System) as! UIButton
 //        button.frame = CGRectMake(100, 100, 100, 50)
 //        button.backgroundColor = UIColor.greenColor()
@@ -86,18 +113,25 @@ class Kledingsoorten: UIViewController {
             soortImage.setBackgroundImage(image, forState:UIControlState.Normal)
             ("Hoofddeksels", forState: UIControlState.Normal)
             break
+        case "Shirts":
+            NSLog(soort)
+            let image = UIImage(named: "Model")
+            let imageView = UIImageView(image: image)
+            soortImage.setBackgroundImage(image, forState:UIControlState.Normal)
+            ("Shirts", forState: UIControlState.Normal)
+            break
         case "Brillen":
             NSLog(soort)
             let image = UIImage(named: "SunglassesR")
             let imageView = UIImageView(image: image)
             soortImage.setBackgroundImage(image, forState:UIControlState.Normal)
-            ("Hoofddeksels", forState: UIControlState.Normal)
+            ("Brillen", forState: UIControlState.Normal)
             break
         default:
             break
         }
-
     }
+    
     @IBAction func kledingstukAction(sender: AnyObject) {
         check = "show"
         if captureDevice != nil {
@@ -152,8 +186,8 @@ class Kledingsoorten: UIViewController {
                     
                     self.view.layer.insertSublayer(im, above: previewLayer)
                     break
-                case "Brillen":
-                    kledingImage.image = UIImage(named: "Sunglasses.png")
+                case "Shirts":
+                    kledingImage.image = UIImage(named: "shirt.png")
 //                    var imageName = "Sunglasses.png"
 //                    var image = UIImage(named: imageName)
 //                    var imageView = UIImageView(image: image!)
@@ -166,6 +200,21 @@ class Kledingsoorten: UIViewController {
                     
                     self.view.layer.insertSublayer(im, above: previewLayer)
                     break
+            case "Brillen":
+                kledingImage.image = UIImage(named: "Sunglasses.png")
+                //                    var imageName = "Sunglasses.png"
+                //                    var image = UIImage(named: imageName)
+                //                    var imageView = UIImageView(image: image!)
+                
+                var im: CALayer {
+                    return kledingImage.layer
+                }
+                
+                //                    kledingImage.frame = CGRect(x: 130, y: 200, width: 180, height: 100)
+                
+                self.view.layer.insertSublayer(im, above: previewLayer)
+                break
+
                 default:
                     break
             }

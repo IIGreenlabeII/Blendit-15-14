@@ -210,22 +210,9 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYT-cN-Oeg">
-                                <rect key="frame" x="76" y="210" width="262" height="100"/>
-                                <color key="backgroundColor" red="0.6039693813" green="0.39473204890000002" blue="0.24734275529999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="brownAction:" destination="7aM-4A-sNF" eventType="touchUpInside" id="YLi-OV-1va"/>
-                                    <segue destination="2Pc-pO-8IT" kind="show" id="mFn-TF-aCE"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6B3-Jz-OW6">
                                 <rect key="frame" x="82" y="349" width="250" height="100"/>
-                                <color key="backgroundColor" red="0.1867497585" green="0.3818826353" blue="0.66175426140000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.48798532196969702" green="0.13812560068805985" blue="0.41878677492528349" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <state key="normal">
@@ -243,6 +230,32 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYT-cN-Oeg">
+                                <rect key="frame" x="76" y="210" width="262" height="100"/>
+                                <color key="backgroundColor" red="0.6039693813" green="0.39473204890000002" blue="0.24734275529999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="brownAction:" destination="7aM-4A-sNF" eventType="touchUpInside" id="YLi-OV-1va"/>
+                                    <segue destination="2Pc-pO-8IT" kind="show" id="mFn-TF-aCE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HT6-Ct-Xjb">
+                                <rect key="frame" x="92" y="489" width="230" height="100"/>
+                                <color key="backgroundColor" red="0.14976995841061508" green="0.38808722786308913" blue="0.48798532196969702" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="brilAction:" destination="7aM-4A-sNF" eventType="touchUpInside" id="iKV-go-dcn"/>
+                                    <segue destination="2Pc-pO-8IT" kind="show" id="ykc-aG-xnj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.89898989900000004" green="0.89898989900000004" blue="0.89898989900000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -255,6 +268,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="blauweKnop" destination="6B3-Jz-OW6" id="JzY-uJ-6Iv"/>
+                        <outlet property="brilKnop" destination="HT6-Ct-Xjb" id="Zja-se-5nk"/>
                         <outlet property="bruineKnop" destination="DYT-cN-Oeg" id="aT3-nv-nEU"/>
                         <outlet property="showStijl" destination="jV9-Jg-Zkf" id="hT4-EW-1Vj"/>
                         <outlet property="tekstLabel" destination="lUq-v1-bFy" id="ZYp-U8-jv6"/>
@@ -308,8 +322,20 @@
                                     <outletCollection property="gestureRecognizers" destination="vQO-d2-XkJ" appends="YES" id="FAX-T4-vvw"/>
                                     <outletCollection property="gestureRecognizers" destination="5AS-Pj-UmW" appends="YES" id="Uo9-im-c8j"/>
                                     <outletCollection property="gestureRecognizers" destination="EXJ-gk-juW" appends="YES" id="ywg-Ah-HJB"/>
+                                    <outletCollection property="gestureRecognizers" destination="cRv-yX-MOm" appends="YES" id="EaW-le-uX2"/>
                                 </connections>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7FX-K4-xTv">
+                                <rect key="frame" x="5" y="83" width="62" height="38"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Terug">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="NJD-Il-GEC" kind="show" id="asz-gM-BIO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.89898989900000004" green="0.89898989900000004" blue="0.89898989900000004" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
@@ -317,10 +343,6 @@
                             <constraint firstAttribute="centerX" secondItem="4ln-6u-JKQ" secondAttribute="centerX" id="Bxg-1m-clg"/>
                             <constraint firstAttribute="centerX" secondItem="Wqr-BH-Gun" secondAttribute="centerX" constant="-0.5" id="vRW-Fx-ToY"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="5AS-Pj-UmW" appends="YES" id="dP2-Zq-NBg"/>
-                            <outletCollection property="gestureRecognizers" destination="EXJ-gk-juW" appends="YES" id="U37-hI-sbb"/>
-                        </connections>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
@@ -346,6 +368,11 @@
                         <action selector="handleRotate:" destination="2Pc-pO-8IT" id="GbG-fF-QWn"/>
                     </connections>
                 </rotationGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="cRv-yX-MOm">
+                    <connections>
+                        <action selector="longPressed:" destination="2Pc-pO-8IT" id="0Bx-M2-R1o"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2302" y="-130"/>
         </scene>
@@ -503,6 +530,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="asz-gM-BIO"/>
         <segue reference="mFn-TF-aCE"/>
     </inferredMetricsTieBreakers>
 </document>
