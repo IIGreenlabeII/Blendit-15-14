@@ -52,7 +52,7 @@ class Kledingsoorten: UIViewController {
     @IBAction func longPressed(longPress: UIGestureRecognizer) {
         if(longPress.state == UIGestureRecognizerState.Began){
             switch(soort){
-                case "Hoofddeksels":
+            case "Hoofddeksels":
                     kledingImage.image = UIImage(named: "frontCap.png")
                     break
             case "Brillen":
